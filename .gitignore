@@ -6,6 +6,7 @@ a.out
 *.swp
 *.a
 *.so.*
+*.list
 
 cscope.*
 

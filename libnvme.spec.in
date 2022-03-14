@@ -4,7 +4,7 @@ Release: 0
 Summary: Linux-native nvme device management library
 
 License: @LICENSE@
-Source: %{name}-%{version}.tar.gz
+Source: %{name}-%{version}.tar.xz
 BuildRoot: %{_tmppath}/%{name}-root
 URL: http://github.com/linux-nvme/libnvme
 
@@ -48,9 +48,9 @@ for Linux-native nvme device maangement.
 %attr(-,root,root) %{_includedir}/nvme/
 %attr(0644,root,root) %{_includedir}/libnvme.h
 %attr(0755,root,root) %{_libdir}/libnvme.so
-%attr(0644,root,root) %{_libdir}/libnvme.a
 %attr(0644,root,root) %{_libdir}/pkgconfig/*
-%attr(0644,root,root) %{_mandir}/man2/*
+%dir %{python3_sitearch}/libnvme
+%{python3_sitearch}/libnvme/*
 
 %changelog
 * Thu Dec 12 2019 Keith Busch <kbusch@kernel.org> - 0.1

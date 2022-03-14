@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-disto:
+  build-distro:
     runs-on: ubuntu-latest
     steps:
       - name: install libraries
@@ -47,3 +47,16 @@ jobs:
         with:
           name: Linux_Meson_log
           path: build/meson-logs/meson-log.txt
+
+  build-rpm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install libraries
+        run: sudo apt-get install meson
+      - uses: actions/checkout@v2
+      - name: Build rpm
+        run: make rpm
+      - uses: actions/upload-artifact@v2
+        with:
+          path: dist/*.tar.gz
+          retention-days: 5

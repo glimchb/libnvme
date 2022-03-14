@@ -40,4 +40,4 @@ test: ${BUILD-DIR}
 
 .PHONY: rpm
 rpm: dist
-	rpmbuild -ba ${BUILD-DIR}/libnvme.spec
+	rpmbuild -ba --build-in-place --define "_sourcedir ${BUILD-DIR}/meson-dist" ${BUILD-DIR}/libnvme.spec
