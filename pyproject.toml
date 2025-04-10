@@ -4,6 +4,13 @@ requires = ["mesonpep517", "wheel", "meson", "ninja"] # PEP 508 specifications.
 build-backend = "mesonpep517.buildapi"
 
 [tool.mesonpep517.metadata]
+author="Hannes Reinecke"
+author-email="hare@suse.de"
+description="Provides library functions for accessing and managing nvme devices on a Linux system."
+description-file="README.md"
+home-page = "https://github.com/linux-nvme/libnvme"
+license="LGPL-2.1-or-later"
+requires-python=">=3.6"
 summary="python bindings for libnvme"
 
 [project]
