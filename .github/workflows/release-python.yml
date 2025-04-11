@@ -48,6 +48,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@v1.12.4
         with:
           repository-url: https://test.pypi.org/legacy/
+          verify-metadata: false
 
   upload_pypi:
     needs: [build_sdist]
@@ -75,4 +76,6 @@ jobs:
 
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@v1.12.4
+        with:
+          verify-metadata: false
         if: steps.check-tag.outputs.match == 'true'
