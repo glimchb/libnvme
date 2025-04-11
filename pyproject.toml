@@ -4,8 +4,8 @@ build-backend = 'mesonpy'
 requires = ['meson-python']
 
 [project]
-#name = "libnvme-boris"
-dynamic = ["name", "version"]
+name = "libnvme-boris"
+dynamic = ["version"]
 description = "Provides library functions for accessing and managing nvme devices on a Linux system."
 readme = "README.md"
 requires-python = ">=3.6"
