@@ -6,7 +6,7 @@
 # Authors: Martin Belanger <Martin.Belanger@dell.com>
 #
 project(
-    'libnvme', ['c'],
+    'libnvme-boris', ['c'],
     meson_version: '>= 0.62.0',
     version: '1.12',
     license: 'LGPL-2.1-or-later',
